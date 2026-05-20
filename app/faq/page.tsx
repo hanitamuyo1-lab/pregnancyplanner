@@ -8,48 +8,44 @@ const faqs = [
     items: [
       {
         q: "How do I get started with the app?",
-        a: "Subscribe to Pregnancy Planner Suite to unlock full access. Once subscribed, head to the Dashboard and fill in your personal details — your name, due date, midwife, and GP. From there, use the navigation at the top to explore each section. We recommend starting with the Journal and Appointments pages early in your pregnancy.",
+        a: "Purchase Pregnancy Planner Suite once to unlock full access forever. Head to the Dashboard, fill in your personal details — your name, due date, midwife, and GP — and you are ready to go. We recommend starting with the Journal and Appointments pages early in your pregnancy.",
       },
       {
         q: "Do I need to create an account?",
-        a: "Yes. A subscription account is required to access Pregnancy Planner Suite. Your account lets us verify your active subscription and, in future, will enable secure cloud sync so your data is available across all your devices.",
+        a: "No account is needed for the web app — your data is saved privately on your device. The iOS app requires your Apple ID to verify your purchase, which Apple handles automatically.",
       },
       {
         q: "Is there a free trial?",
-        a: "Yes — we offer a 7-day free trial so you can explore the full app before committing. No charge is made until the trial ends. You can cancel at any time during the trial period and will not be billed.",
+        a: "The web version is currently free to explore. The iOS app is a one-time purchase — pay once and you own it forever with no further charges.",
       },
       {
         q: "Does the app work on my phone?",
-        a: "Yes. The app is fully responsive and works on any modern browser — on your phone, tablet, laptop, or desktop computer. A dedicated iOS app is also coming soon.",
+        a: "Yes. The web app is fully responsive and works on any modern browser — on your phone, tablet, laptop, or desktop. A dedicated iOS app is also available on the App Store.",
       },
     ],
   },
   {
-    category: "Subscription & Billing",
+    category: "Pricing & Payment",
     items: [
       {
-        q: "How much does a subscription cost?",
-        a: "Pregnancy Planner Suite is available on a Monthly plan at £3.99/month, or an Annual plan at £29.99/year (saving over 35% compared to monthly). Prices may vary by region.",
+        q: "How much does it cost?",
+        a: "Pregnancy Planner Suite is a one-time payment of £7.99 on the App Store. Pay once and own it forever — there are no subscriptions, no renewals, and no hidden charges.",
       },
       {
-        q: "What do I get with a subscription?",
-        a: "Full access to all features: Pregnancy Journal (weeks 1–40), Baby Shower Planner, Doctor & Midwife Appointments tracker, Weekly Wellness Plan, Trimester To-Do lists, Pregnancy Budget tracker, and Activities Planner. Future updates and new features are included at no extra cost.",
+        q: "What do I get with my purchase?",
+        a: "Full lifetime access to all features: Pregnancy Journal (weeks 1–40), Baby Shower Planner, Doctor & Midwife Appointments tracker, Weekly Wellness Plan, Trimester To-Do lists, Pregnancy Budget tracker, and Activities Planner. All future updates are included at no extra cost.",
       },
       {
-        q: "How do I cancel my subscription?",
-        a: "You can cancel at any time from your account settings. On iOS, manage your subscription through Settings → Apple ID → Subscriptions. On the web, cancel directly from your account page. Cancellation takes effect at the end of your current billing period — you will not be charged again after that.",
-      },
-      {
-        q: "Will I be charged automatically?",
-        a: "Yes. Subscriptions renew automatically at the end of each billing period (monthly or annual) unless cancelled beforehand. You will receive a reminder email before any renewal charge.",
+        q: "Will I ever be charged again?",
+        a: "No. This is a one-time purchase. Once you buy it, it is yours forever. There are no recurring charges, no renewals, and no premium tiers.",
       },
       {
         q: "Can I get a refund?",
-        a: "If you subscribed via the App Store, refund requests are handled by Apple — visit reportaproblem.apple.com. If you subscribed via our website, contact us within 14 days of purchase for a refund under our satisfaction guarantee.",
+        a: "Refund requests are handled by Apple. Visit reportaproblem.apple.com, select the purchase, and request a refund. Apple typically processes refunds within 48 hours for eligible requests.",
       },
       {
-        q: "Do you offer any discounts?",
-        a: "We offer a 35%+ saving when you choose the Annual plan over Monthly. We also run occasional promotional offers — follow us to stay updated.",
+        q: "I bought the app but lost access — what do I do?",
+        a: "Tap 'Restore purchase' on the purchase screen. This checks your Apple ID for a previous purchase and restores your access instantly at no charge. Make sure you are signed in to the same Apple ID used for the original purchase.",
       },
     ],
   },
@@ -65,8 +61,8 @@ const faqs = [
         a: "Yes, as long as you use the same browser on the same device and have not cleared your browser's local storage or cache. With the upcoming cloud sync feature, your data will be available on any device you sign in to.",
       },
       {
-        q: "What happens if I cancel my subscription?",
-        a: "If you cancel, your access continues until the end of your paid period. After that, you will no longer be able to access the app's features. Your locally stored data remains on your device but cannot be accessed through the app.",
+        q: "Will I lose my data if I delete the app?",
+        a: "On the web app, your data is stored in your browser and will remain unless you clear your browser storage. On iOS, deleting the app removes local data — but your purchase is permanently tied to your Apple ID and can be restored any time by reinstalling and tapping 'Restore purchase'.",
       },
       {
         q: "Is my data private?",
