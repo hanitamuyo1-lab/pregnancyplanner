@@ -29,9 +29,9 @@ export default function Journal() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold text-pink-700">📖 Pregnancy Journal</h1>
+        <h1 className="text-2xl font-semibold text-sky-700">📖 Pregnancy Journal</h1>
         <p className="text-sm text-gray-500 mt-1">Record your journey — one beautiful week at a time</p>
-        <p className="text-xs text-pink-400 mt-1">{filled} of 40 weeks recorded</p>
+        <p className="text-xs text-sky-400 mt-1">{filled} of 40 weeks recorded</p>
       </div>
 
       <div className="flex flex-wrap gap-2">
@@ -41,10 +41,10 @@ export default function Journal() {
             onClick={() => setSelected(w)}
             className={`w-9 h-9 rounded-full text-xs font-medium transition-colors ${
               selected === w
-                ? "bg-pink-500 text-white"
+                ? "bg-sky-500 text-white"
                 : entries[w]?.feeling || entries[w]?.message
-                ? "bg-pink-200 text-pink-800"
-                : "bg-white border border-pink-200 text-pink-400 hover:bg-pink-50"
+                ? "bg-sky-200 text-sky-800"
+                : "bg-white border border-sky-200 text-sky-400 hover:bg-sky-50"
             }`}
           >
             {w}
@@ -52,23 +52,23 @@ export default function Journal() {
         ))}
       </div>
 
-      <div className="bg-white rounded-2xl border border-pink-100 shadow-sm p-6 space-y-5">
-        <h2 className="text-pink-700 font-medium">Week {selected}</h2>
+      <div className="bg-white rounded-2xl border border-sky-100 shadow-sm p-6 space-y-5">
+        <h2 className="text-sky-700 font-medium">Week {selected}</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex flex-col gap-1">
-            <label className="text-xs text-pink-500 uppercase tracking-wider">Date</label>
+            <label className="text-xs text-sky-500 uppercase tracking-wider">Date</label>
             <input
               type="date"
-              className="border border-pink-200 rounded px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-pink-300"
+              className="border border-sky-200 rounded px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-sky-300"
               value={entry.date}
               onChange={e => update("date", e.target.value)}
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="text-xs text-pink-500 uppercase tracking-wider">How I'm Feeling</label>
+            <label className="text-xs text-sky-500 uppercase tracking-wider">How I'm Feeling</label>
             <input
-              className="border border-pink-200 rounded px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-pink-300"
+              className="border border-sky-200 rounded px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-sky-300"
               value={entry.feeling}
               placeholder="e.g. Excited and a little tired..."
               onChange={e => update("feeling", e.target.value)}
@@ -77,9 +77,9 @@ export default function Journal() {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label className="text-xs text-pink-500 uppercase tracking-wider">Baby's Development</label>
+          <label className="text-xs text-sky-500 uppercase tracking-wider">Baby's Development</label>
           <input
-            className="border border-pink-200 rounded px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-pink-300"
+            className="border border-sky-200 rounded px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-sky-300"
             value={entry.development}
             placeholder="e.g. Baby is the size of a lemon..."
             onChange={e => update("development", e.target.value)}
@@ -87,10 +87,10 @@ export default function Journal() {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label className="text-xs text-pink-500 uppercase tracking-wider">Symptoms / Notes</label>
+          <label className="text-xs text-sky-500 uppercase tracking-wider">Symptoms / Notes</label>
           <textarea
             rows={3}
-            className="border border-pink-200 rounded px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-pink-300 resize-none"
+            className="border border-sky-200 rounded px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-sky-300 resize-none"
             value={entry.symptoms}
             placeholder="Any symptoms, appointments, or notes this week..."
             onChange={e => update("symptoms", e.target.value)}
@@ -98,10 +98,10 @@ export default function Journal() {
         </div>
 
         <div className="flex flex-col gap-1">
-          <label className="text-xs text-pink-500 uppercase tracking-wider">Message to Baby</label>
+          <label className="text-xs text-sky-500 uppercase tracking-wider">Message to Baby</label>
           <textarea
             rows={4}
-            className="border border-pink-200 rounded px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-pink-300 resize-none"
+            className="border border-sky-200 rounded px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-sky-300 resize-none"
             value={entry.message}
             placeholder="Dear baby, this week I want you to know..."
             onChange={e => update("message", e.target.value)}
@@ -112,7 +112,7 @@ export default function Journal() {
           {selected > 1 && (
             <button
               onClick={() => setSelected(s => s - 1)}
-              className="px-4 py-2 text-sm border border-pink-200 rounded-full hover:bg-pink-50 text-pink-600 transition-colors"
+              className="px-4 py-2 text-sm border border-sky-200 rounded-full hover:bg-sky-50 text-sky-600 transition-colors"
             >
               ← Week {selected - 1}
             </button>
@@ -120,7 +120,7 @@ export default function Journal() {
           {selected < 40 && (
             <button
               onClick={() => setSelected(s => s + 1)}
-              className="px-4 py-2 text-sm bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors ml-auto"
+              className="px-4 py-2 text-sm bg-sky-500 text-white rounded-full hover:bg-sky-600 transition-colors ml-auto"
             >
               Week {selected + 1} →
             </button>

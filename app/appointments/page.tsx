@@ -46,66 +46,66 @@ export default function Appointments() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold text-pink-700">🩺 Doctor & Midwife Appointments</h1>
+        <h1 className="text-2xl font-semibold text-sky-700">🩺 Doctor & Midwife Appointments</h1>
         <p className="text-sm text-gray-500 mt-1">All scans, midwife visits, consultant notes & results</p>
-        <p className="text-xs text-pink-400 mt-1">{done} of {appts.length} completed</p>
+        <p className="text-xs text-sky-400 mt-1">{done} of {appts.length} completed</p>
       </div>
 
-      <button onClick={addAppt} className="px-4 py-2 bg-pink-500 text-white rounded-full text-sm hover:bg-pink-600 transition-colors">
+      <button onClick={addAppt} className="px-4 py-2 bg-sky-500 text-white rounded-full text-sm hover:bg-sky-600 transition-colors">
         + Add Appointment
       </button>
 
       <div className="space-y-3">
         {appts.map((a, i) => (
-          <div key={i} className={`bg-white rounded-xl border shadow-sm overflow-hidden transition-all ${a.done ? "border-pink-100 opacity-60" : "border-pink-200"}`}>
+          <div key={i} className={`bg-white rounded-xl border shadow-sm overflow-hidden transition-all ${a.done ? "border-sky-100 opacity-60" : "border-sky-200"}`}>
             <div
-              className="flex items-center gap-3 px-4 py-3 cursor-pointer hover:bg-pink-50"
+              className="flex items-center gap-3 px-4 py-3 cursor-pointer hover:bg-sky-50"
               onClick={() => toggle(i)}
             >
               <input
                 type="checkbox"
                 checked={a.done}
                 onChange={e => { e.stopPropagation(); update(i, { ...a, done: e.target.checked }); }}
-                className="accent-pink-500 w-4 h-4 shrink-0"
+                className="accent-sky-500 w-4 h-4 shrink-0"
               />
-              <span className="text-xs bg-pink-100 text-pink-600 px-2 py-0.5 rounded-full shrink-0">Wk {a.week || "?"}</span>
-              <span className={`font-medium text-sm flex-1 ${a.done ? "line-through text-gray-400" : "text-pink-800"}`}>{a.type || "New appointment"}</span>
+              <span className="text-xs bg-sky-100 text-sky-600 px-2 py-0.5 rounded-full shrink-0">Wk {a.week || "?"}</span>
+              <span className={`font-medium text-sm flex-1 ${a.done ? "line-through text-gray-400" : "text-sky-800"}`}>{a.type || "New appointment"}</span>
               {a.date && <span className="text-xs text-gray-400 shrink-0">{a.date}</span>}
-              <span className="text-pink-300 text-xs">{expanded === i ? "▲" : "▼"}</span>
+              <span className="text-sky-300 text-xs">{expanded === i ? "▲" : "▼"}</span>
             </div>
 
             {expanded === i && (
-              <div className="px-4 pb-4 grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-pink-50">
+              <div className="px-4 pb-4 grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-sky-50">
                 <div className="flex flex-col gap-1">
-                  <label className="text-xs text-pink-400 uppercase tracking-wider mt-3">Week</label>
-                  <input className="border border-pink-200 rounded px-2 py-1 text-sm" value={a.week} onChange={e => update(i, { ...a, week: e.target.value })} placeholder="e.g. 12" />
+                  <label className="text-xs text-sky-400 uppercase tracking-wider mt-3">Week</label>
+                  <input className="border border-sky-200 rounded px-2 py-1 text-sm" value={a.week} onChange={e => update(i, { ...a, week: e.target.value })} placeholder="e.g. 12" />
                 </div>
                 <div className="flex flex-col gap-1">
-                  <label className="text-xs text-pink-400 uppercase tracking-wider mt-3">Type</label>
-                  <input className="border border-pink-200 rounded px-2 py-1 text-sm" value={a.type} onChange={e => update(i, { ...a, type: e.target.value })} placeholder="Appointment type" />
+                  <label className="text-xs text-sky-400 uppercase tracking-wider mt-3">Type</label>
+                  <input className="border border-sky-200 rounded px-2 py-1 text-sm" value={a.type} onChange={e => update(i, { ...a, type: e.target.value })} placeholder="Appointment type" />
                 </div>
                 <div className="flex flex-col gap-1">
-                  <label className="text-xs text-pink-400 uppercase tracking-wider">Date</label>
-                  <input type="date" className="border border-pink-200 rounded px-2 py-1 text-sm" value={a.date} onChange={e => update(i, { ...a, date: e.target.value })} />
+                  <label className="text-xs text-sky-400 uppercase tracking-wider">Date</label>
+                  <input type="date" className="border border-sky-200 rounded px-2 py-1 text-sm" value={a.date} onChange={e => update(i, { ...a, date: e.target.value })} />
                 </div>
                 <div className="flex flex-col gap-1">
-                  <label className="text-xs text-pink-400 uppercase tracking-wider">Time</label>
-                  <input type="time" className="border border-pink-200 rounded px-2 py-1 text-sm" value={a.time} onChange={e => update(i, { ...a, time: e.target.value })} />
+                  <label className="text-xs text-sky-400 uppercase tracking-wider">Time</label>
+                  <input type="time" className="border border-sky-200 rounded px-2 py-1 text-sm" value={a.time} onChange={e => update(i, { ...a, time: e.target.value })} />
                 </div>
                 <div className="flex flex-col gap-1 sm:col-span-2">
-                  <label className="text-xs text-pink-400 uppercase tracking-wider">Location / Clinic</label>
-                  <input className="border border-pink-200 rounded px-2 py-1 text-sm" value={a.location} onChange={e => update(i, { ...a, location: e.target.value })} placeholder="Hospital or clinic name" />
+                  <label className="text-xs text-sky-400 uppercase tracking-wider">Location / Clinic</label>
+                  <input className="border border-sky-200 rounded px-2 py-1 text-sm" value={a.location} onChange={e => update(i, { ...a, location: e.target.value })} placeholder="Hospital or clinic name" />
                 </div>
                 <div className="flex flex-col gap-1 sm:col-span-2">
-                  <label className="text-xs text-pink-400 uppercase tracking-wider">Notes</label>
-                  <textarea rows={2} className="border border-pink-200 rounded px-2 py-1 text-sm resize-none" value={a.notes} onChange={e => update(i, { ...a, notes: e.target.value })} />
+                  <label className="text-xs text-sky-400 uppercase tracking-wider">Notes</label>
+                  <textarea rows={2} className="border border-sky-200 rounded px-2 py-1 text-sm resize-none" value={a.notes} onChange={e => update(i, { ...a, notes: e.target.value })} />
                 </div>
                 <div className="flex flex-col gap-1 sm:col-span-2">
-                  <label className="text-xs text-pink-400 uppercase tracking-wider">Next Steps</label>
-                  <input className="border border-pink-200 rounded px-2 py-1 text-sm" value={a.nextSteps} onChange={e => update(i, { ...a, nextSteps: e.target.value })} placeholder="Follow up actions..." />
+                  <label className="text-xs text-sky-400 uppercase tracking-wider">Next Steps</label>
+                  <input className="border border-sky-200 rounded px-2 py-1 text-sm" value={a.nextSteps} onChange={e => update(i, { ...a, nextSteps: e.target.value })} placeholder="Follow up actions..." />
                 </div>
                 <div className="sm:col-span-2 flex justify-end">
-                  <button onClick={() => removeAppt(i)} className="text-xs text-pink-300 hover:text-pink-500">Remove appointment</button>
+                  <button onClick={() => removeAppt(i)} className="text-xs text-sky-300 hover:text-sky-500">Remove appointment</button>
                 </div>
               </div>
             )}

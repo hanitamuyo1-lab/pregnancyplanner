@@ -116,15 +116,15 @@ const faqs = [
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-pink-50 last:border-0">
+    <div className="border-b border-sky-50 last:border-0">
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-start justify-between gap-4 py-4 text-left"
       >
-        <span className={`text-sm font-medium leading-relaxed ${open ? "text-pink-700" : "text-gray-700"}`}>
+        <span className={`text-sm font-medium leading-relaxed ${open ? "text-sky-700" : "text-gray-700"}`}>
           {q}
         </span>
-        <span className={`text-pink-400 shrink-0 mt-0.5 transition-transform ${open ? "rotate-180" : ""}`}>▼</span>
+        <span className={`text-sky-400 shrink-0 mt-0.5 transition-transform ${open ? "rotate-180" : ""}`}>▼</span>
       </button>
       {open && (
         <p className="text-sm text-gray-500 leading-relaxed pb-4 pr-6">{a}</p>
@@ -138,16 +138,16 @@ export default function FAQ() {
     <div className="max-w-3xl mx-auto space-y-10">
 
       <div className="py-8 space-y-3">
-        <h1 className="text-3xl font-semibold text-pink-700">Frequently Asked Questions</h1>
+        <h1 className="text-3xl font-semibold text-sky-700">Frequently Asked Questions</h1>
         <p className="text-gray-500 leading-relaxed">
           Everything you need to know about using Pregnancy Planner Suite. Can't find your answer? Check the About page or reach out via GitHub.
         </p>
       </div>
 
       {faqs.map(({ category, items }) => (
-        <div key={category} className="bg-white rounded-2xl border border-pink-100 shadow-sm overflow-hidden">
-          <div className="bg-pink-50 px-6 py-3 border-b border-pink-100">
-            <h2 className="font-semibold text-pink-700 text-sm uppercase tracking-wider">{category}</h2>
+        <div key={category} className="bg-white rounded-2xl border border-sky-100 shadow-sm overflow-hidden">
+          <div className="bg-sky-50 px-6 py-3 border-b border-sky-100">
+            <h2 className="font-semibold text-sky-700 text-sm uppercase tracking-wider">{category}</h2>
           </div>
           <div className="px-6">
             {items.map(({ q, a }) => (
@@ -157,22 +157,22 @@ export default function FAQ() {
         </div>
       ))}
 
-      <div className="bg-pink-50 rounded-2xl border border-pink-100 px-6 py-5 flex gap-4">
+      <div className="bg-sky-50 rounded-2xl border border-sky-100 px-6 py-5 flex gap-4">
         <div className="text-2xl shrink-0">💬</div>
         <div>
-          <div className="font-semibold text-pink-700 mb-1">Still have a question?</div>
+          <div className="font-semibold text-sky-700 mb-1">Still have a question?</div>
           <p className="text-sm text-gray-600">
             Visit the{" "}
-            <a href="/about" className="text-pink-500 underline underline-offset-2 hover:text-pink-700">About page</a>
+            <a href="/about" className="text-sky-500 underline underline-offset-2 hover:text-sky-700">About page</a>
             {" "}for more detail on how the app works, or check our{" "}
-            <a href="/privacy" className="text-pink-500 underline underline-offset-2 hover:text-pink-700">Privacy Policy</a>
+            <a href="/privacy" className="text-sky-500 underline underline-offset-2 hover:text-sky-700">Privacy Policy</a>
             {" "}and{" "}
-            <a href="/terms" className="text-pink-500 underline underline-offset-2 hover:text-pink-700">Terms & Conditions</a>.
+            <a href="/terms" className="text-sky-500 underline underline-offset-2 hover:text-sky-700">Terms & Conditions</a>.
           </p>
         </div>
       </div>
 
-      <div className="text-center text-pink-300 text-sm pb-6">
+      <div className="text-center text-sky-300 text-sm pb-6">
         Pregnancy Planner Suite — built with care, designed for privacy 🌸
       </div>
 

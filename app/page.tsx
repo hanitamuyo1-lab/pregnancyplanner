@@ -27,10 +27,10 @@ export default function Dashboard() {
             <a
               key={href}
               href={href}
-              className="bg-white rounded-2xl border border-pink-100 shadow-sm p-5 hover:shadow-md hover:border-pink-300 transition-shadow block"
+              className="bg-white rounded-2xl border border-sky-100 shadow-sm p-5 hover:shadow-md hover:border-sky-300 transition-shadow block"
             >
               <div className="text-2xl mb-2">{icon}</div>
-              <div className="font-medium text-pink-700">{label}</div>
+              <div className="font-medium text-sky-700">{label}</div>
               <div className="text-xs text-gray-500 mt-1">{desc}</div>
             </a>
           ))}

@@ -35,8 +35,8 @@ const defaultActivities: Activity[] = [
 ];
 
 const partnerColour: Record<string, string> = {
-  Yes: "bg-pink-100 text-pink-700",
-  Optional: "bg-rose-50 text-rose-500",
+  Yes: "bg-sky-100 text-sky-700",
+  Optional: "bg-sky-50 text-sky-500",
   No: "bg-gray-100 text-gray-500",
 };
 
@@ -54,13 +54,13 @@ export default function Activities() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold text-pink-700">🌸 Pregnancy Activities Planner</h1>
+        <h1 className="text-2xl font-semibold text-sky-700">🌸 Pregnancy Activities Planner</h1>
         <p className="text-sm text-gray-500 mt-1">20 beautiful pregnancy activities with progress tracker</p>
         <div className="mt-3 flex items-center gap-3">
-          <div className="flex-1 bg-pink-100 rounded-full h-2">
-            <div className="bg-pink-400 h-2 rounded-full transition-all" style={{ width: `${(done / activities.length) * 100}%` }} />
+          <div className="flex-1 bg-sky-100 rounded-full h-2">
+            <div className="bg-sky-400 h-2 rounded-full transition-all" style={{ width: `${(done / activities.length) * 100}%` }} />
           </div>
-          <span className="text-sm text-pink-500 shrink-0">{done} / {activities.length}</span>
+          <span className="text-sm text-sky-500 shrink-0">{done} / {activities.length}</span>
         </div>
       </div>
 
@@ -68,20 +68,20 @@ export default function Activities() {
         {activities.map((a, i) => (
           <div
             key={i}
-            className={`bg-white rounded-2xl border shadow-sm p-5 transition-all ${a.done ? "border-pink-100 opacity-60" : "border-pink-200 hover:shadow-md"}`}
+            className={`bg-white rounded-2xl border shadow-sm p-5 transition-all ${a.done ? "border-sky-100 opacity-60" : "border-sky-200 hover:shadow-md"}`}
           >
             <div className="flex items-start gap-3">
               <input
                 type="checkbox"
                 checked={a.done}
                 onChange={() => toggle(i)}
-                className="accent-pink-500 w-4 h-4 mt-1 shrink-0 cursor-pointer"
+                className="accent-sky-500 w-4 h-4 mt-1 shrink-0 cursor-pointer"
               />
               <div className="flex-1 min-w-0">
-                <div className={`font-medium text-sm ${a.done ? "line-through text-gray-400" : "text-pink-800"}`}>{a.activity}</div>
+                <div className={`font-medium text-sm ${a.done ? "line-through text-gray-400" : "text-sky-800"}`}>{a.activity}</div>
                 <p className="text-xs text-gray-500 mt-1 leading-relaxed">{a.description}</p>
                 <div className="flex flex-wrap gap-2 mt-3">
-                  <span className="text-xs bg-pink-50 text-pink-500 px-2 py-0.5 rounded-full">{a.trimester}</span>
+                  <span className="text-xs bg-sky-50 text-sky-500 px-2 py-0.5 rounded-full">{a.trimester}</span>
                   <span className="text-xs bg-gray-50 text-gray-500 px-2 py-0.5 rounded-full">{a.type}</span>
                   <span className={`text-xs px-2 py-0.5 rounded-full ${partnerColour[a.withPartner]}`}>
                     Partner: {a.withPartner}
@@ -89,10 +89,10 @@ export default function Activities() {
                 </div>
                 {a.done && (
                   <div className="flex items-center gap-2 mt-2">
-                    <span className="text-xs text-pink-400">Done on:</span>
+                    <span className="text-xs text-sky-400">Done on:</span>
                     <input
                       type="date"
-                      className="text-xs border border-pink-200 rounded px-2 py-0.5"
+                      className="text-xs border border-sky-200 rounded px-2 py-0.5"
                       value={a.dateDone}
                       onChange={e => updateDate(i, e.target.value)}
                     />

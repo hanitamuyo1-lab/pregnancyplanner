@@ -24,7 +24,7 @@ export default function NavLinks() {
           href={href}
           className={`px-3 py-1 rounded-full text-sm transition-colors ${
             pathname === href
-              ? "bg-white text-pink-600 font-medium shadow-sm"
+              ? "bg-white text-sky-600 font-medium shadow-sm"
               : "text-white/90 hover:bg-white/20"
           }`}
         >

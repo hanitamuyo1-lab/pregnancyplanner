@@ -51,15 +51,15 @@ export default function About() {
       {/* Hero */}
       <div className="text-center py-8 space-y-3">
         <div className="text-5xl">🌸</div>
-        <h1 className="text-3xl font-semibold text-pink-700">About Pregnancy Planner Suite</h1>
+        <h1 className="text-3xl font-semibold text-sky-700">About Pregnancy Planner Suite</h1>
         <p className="text-gray-500 text-lg leading-relaxed">
           Your complete companion from bump to baby — all in one beautiful, easy-to-use app.
         </p>
       </div>
 
       {/* What it is */}
-      <div className="bg-white rounded-2xl border border-pink-100 shadow-sm p-8 space-y-4">
-        <h2 className="text-xl font-semibold text-pink-700">What is this app?</h2>
+      <div className="bg-white rounded-2xl border border-sky-100 shadow-sm p-8 space-y-4">
+        <h2 className="text-xl font-semibold text-sky-700">What is this app?</h2>
         <p className="text-gray-600 leading-relaxed">
           Pregnancy Planner Suite is a free, private web app designed to support you through every stage of pregnancy. Whether you're in your first trimester or counting down the final weeks, it gives you a calm, organised space to track appointments, record memories, manage your budget, and take care of your wellbeing — all without needing to create an account or share any personal data.
         </p>
@@ -70,13 +70,13 @@ export default function About() {
 
       {/* Sections */}
       <div>
-        <h2 className="text-xl font-semibold text-pink-700 mb-6">What's inside</h2>
+        <h2 className="text-xl font-semibold text-sky-700 mb-6">What's inside</h2>
         <div className="space-y-4">
           {sections.map(({ icon, title, desc }) => (
-            <div key={title} className="bg-white rounded-2xl border border-pink-100 shadow-sm p-6 flex gap-5">
+            <div key={title} className="bg-white rounded-2xl border border-sky-100 shadow-sm p-6 flex gap-5">
               <div className="text-3xl shrink-0">{icon}</div>
               <div>
-                <h3 className="font-semibold text-pink-700 mb-1">{title}</h3>
+                <h3 className="font-semibold text-sky-700 mb-1">{title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
               </div>
             </div>
@@ -85,14 +85,14 @@ export default function About() {
       </div>
 
       {/* Tips */}
-      <div className="bg-pink-50 rounded-2xl border border-pink-100 p-8 space-y-5">
-        <h2 className="text-xl font-semibold text-pink-700">Tips for getting the most out of it</h2>
+      <div className="bg-sky-50 rounded-2xl border border-sky-100 p-8 space-y-5">
+        <h2 className="text-xl font-semibold text-sky-700">Tips for getting the most out of it</h2>
         <ul className="space-y-4">
           {tips.map(({ tip, detail }) => (
             <li key={tip} className="flex gap-3">
-              <span className="text-pink-400 mt-1 shrink-0">✦</span>
+              <span className="text-sky-400 mt-1 shrink-0">✦</span>
               <div>
-                <span className="font-medium text-pink-800">{tip} — </span>
+                <span className="font-medium text-sky-800">{tip} — </span>
                 <span className="text-gray-600 text-sm">{detail}</span>
               </div>
             </li>
@@ -101,15 +101,15 @@ export default function About() {
       </div>
 
       {/* Privacy */}
-      <div className="bg-white rounded-2xl border border-pink-100 shadow-sm p-8 space-y-3">
-        <h2 className="text-xl font-semibold text-pink-700">Privacy & your data</h2>
+      <div className="bg-white rounded-2xl border border-sky-100 shadow-sm p-8 space-y-3">
+        <h2 className="text-xl font-semibold text-sky-700">Privacy & your data</h2>
         <p className="text-gray-600 leading-relaxed text-sm">
           This app stores all of your information in your browser's local storage — on your device only. No accounts, no sign-ups, no data is ever sent to any server. If you clear your browser data, your planner data will be cleared too, so we recommend keeping the app open on a device you use regularly.
         </p>
       </div>
 
       {/* Footer note */}
-      <div className="text-center text-pink-300 text-sm pb-4">
+      <div className="text-center text-sky-300 text-sm pb-4">
         Made with love for every mama on her journey 🌸
       </div>
 
