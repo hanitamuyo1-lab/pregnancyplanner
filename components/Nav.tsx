@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Suspense } from "react";
 import NavLinks from "./NavLinks";
 
@@ -18,13 +17,13 @@ function NavFallback() {
   return (
     <nav className="flex flex-wrap gap-1">
       {links.map(({ href, label }) => (
-        <Link
+        <a
           key={href}
           href={href}
           className="px-3 py-1 rounded-full text-sm text-white/80 hover:bg-white/20 transition-colors"
         >
           {label}
-        </Link>
+        </a>
       ))}
     </nav>
   );

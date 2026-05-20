@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
@@ -19,7 +18,7 @@ export default function NavLinks() {
   return (
     <nav className="flex flex-wrap gap-1">
       {links.map(({ href, label }) => (
-        <Link
+        <a
           key={href}
           href={href}
           className={`px-3 py-1 rounded-full text-sm transition-colors ${
@@ -29,7 +28,7 @@ export default function NavLinks() {
           }`}
         >
           {label}
-        </Link>
+        </a>
       ))}
     </nav>
   );
