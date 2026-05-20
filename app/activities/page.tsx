@@ -1,5 +1,6 @@
 "use client";
 import { useStore } from "@/lib/useStore";
+import BackButton from "@/components/BackButton";
 
 type Activity = {
   activity: string;
@@ -53,6 +54,7 @@ export default function Activities() {
 
   return (
     <div className="space-y-6">
+      <BackButton />
       <div>
         <h1 className="text-2xl font-semibold text-pink-700">🌸 Pregnancy Activities Planner</h1>
         <p className="text-sm text-gray-500 mt-1">20 beautiful pregnancy activities with progress tracker</p>

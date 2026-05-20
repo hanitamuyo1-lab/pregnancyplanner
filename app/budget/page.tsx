@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useStore } from "@/lib/useStore";
+import BackButton from "@/components/BackButton";
 
 type BudgetItem = {
   item: string;
@@ -77,6 +78,7 @@ export default function Budget() {
 
   return (
     <div className="space-y-6">
+      <BackButton />
       <div>
         <h1 className="text-2xl font-semibold text-pink-700">💰 Pregnancy & Baby Budget</h1>
         <p className="text-sm text-gray-500 mt-1">Full cost tracker — nursery, clothing, healthcare & more</p>

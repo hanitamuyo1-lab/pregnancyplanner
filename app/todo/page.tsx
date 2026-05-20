@@ -1,5 +1,6 @@
 "use client";
 import { useStore } from "@/lib/useStore";
+import BackButton from "@/components/BackButton";
 
 type Task = { task: string; category: string; priority: "High" | "Medium" | "Low"; done: boolean };
 
@@ -116,6 +117,7 @@ function TaskList({ storeKey, defaultTasks }: { storeKey: string; defaultTasks: 
 export default function Todo() {
   return (
     <div className="space-y-8">
+      <BackButton />
       <div>
         <h1 className="text-2xl font-semibold text-pink-700">✅ Trimester To-Do List</h1>
         <p className="text-sm text-gray-500 mt-1">Essential tasks broken down by trimester</p>

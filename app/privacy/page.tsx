@@ -1,3 +1,5 @@
+import BackButton from "@/components/BackButton";
+
 export const metadata = {
   title: "Privacy Policy — Pregnancy Planner Suite",
 };
@@ -52,7 +54,7 @@ const sections = [
 export default function PrivacyPolicy() {
   return (
     <div className="max-w-3xl mx-auto space-y-10">
-
+      <BackButton />
       <div className="py-8 space-y-3">
         <h1 className="text-3xl font-semibold text-pink-700">Privacy Policy</h1>
         <p className="text-sm text-gray-400">Effective date: 20 May 2026</p>

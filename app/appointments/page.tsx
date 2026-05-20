@@ -1,5 +1,6 @@
 "use client";
 import { useStore } from "@/lib/useStore";
+import BackButton from "@/components/BackButton";
 
 type Appt = {
   week: string;
@@ -45,6 +46,7 @@ export default function Appointments() {
 
   return (
     <div className="space-y-6">
+      <BackButton />
       <div>
         <h1 className="text-2xl font-semibold text-pink-700">🩺 Doctor & Midwife Appointments</h1>
         <p className="text-sm text-gray-500 mt-1">All scans, midwife visits, consultant notes & results</p>

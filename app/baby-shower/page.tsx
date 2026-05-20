@@ -1,6 +1,7 @@
 "use client";
 import { useStore } from "@/lib/useStore";
 import { useState } from "react";
+import BackButton from "@/components/BackButton";
 
 type Guest = { name: string; contact: string; invited: boolean; rsvp: string; dietary: string; giftGiven: boolean };
 type GiftItem = { item: string; category: string; cost: string; priority: string; whereToBuy: string; received: boolean };
@@ -44,6 +45,7 @@ export default function BabyShower() {
 
   return (
     <div className="space-y-6">
+      <BackButton />
       <div>
         <h1 className="text-2xl font-semibold text-pink-700">🎀 Baby Shower Planner</h1>
         <p className="text-sm text-gray-500 mt-1">Gifts, guests, RSVPs, vendors and party checklist</p>

@@ -1,6 +1,7 @@
 "use client";
 import { useStore } from "@/lib/useStore";
 import { useState } from "react";
+import BackButton from "@/components/BackButton";
 
 type Entry = {
   date: string;
@@ -28,6 +29,7 @@ export default function Journal() {
 
   return (
     <div className="space-y-6">
+      <BackButton />
       <div>
         <h1 className="text-2xl font-semibold text-pink-700">📖 Pregnancy Journal</h1>
         <p className="text-sm text-gray-500 mt-1">Record your journey — one beautiful week at a time</p>

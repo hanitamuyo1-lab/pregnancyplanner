@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import BackButton from "@/components/BackButton";
 
 const faqs = [
   {
@@ -136,7 +137,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 export default function FAQ() {
   return (
     <div className="max-w-3xl mx-auto space-y-10">
-
+      <BackButton />
       <div className="py-8 space-y-3">
         <h1 className="text-3xl font-semibold text-pink-700">Frequently Asked Questions</h1>
         <p className="text-gray-500 leading-relaxed">

@@ -1,3 +1,5 @@
+import BackButton from "@/components/BackButton";
+
 const sections = [
   {
     icon: "📖",
@@ -47,6 +49,7 @@ const tips = [
 export default function About() {
   return (
     <div className="space-y-12 max-w-3xl mx-auto">
+      <BackButton />
 
       {/* Hero */}
       <div className="text-center py-8 space-y-3">

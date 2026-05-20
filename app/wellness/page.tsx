@@ -1,5 +1,6 @@
 "use client";
 import { useStore } from "@/lib/useStore";
+import BackButton from "@/components/BackButton";
 
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
@@ -41,6 +42,7 @@ export default function Wellness() {
 
   return (
     <div className="space-y-8">
+      <BackButton />
       <div>
         <h1 className="text-2xl font-semibold text-pink-700">🌿 Weekly Wellness Plan</h1>
         <p className="text-sm text-gray-500 mt-1">Nourish your body, mind and soul throughout your pregnancy journey</p>
