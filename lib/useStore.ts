@@ -1,15 +1,15 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export function useStore<T>(key: string, initial: T): [T, (v: T) => void] {
-  const [value, setValue] = useState<T>(initial);
-
-  useEffect(() => {
+  const [value, setValue] = useState<T>(() => {
+    if (typeof window === "undefined") return initial;
     try {
       const stored = localStorage.getItem(key);
-      if (stored) setValue(JSON.parse(stored));
+      if (stored) return JSON.parse(stored) as T;
     } catch {}
-  }, [key]);
+    return initial;
+  });
 
   const set = (v: T) => {
     setValue(v);

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import DetailsForm from "@/components/DetailsForm";
 
 const sections = [
@@ -25,15 +24,15 @@ export default function Dashboard() {
         <h2 className="text-lg font-medium text-pink-700 mb-4">What's Inside</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {sections.map(({ href, icon, label, desc }) => (
-            <Link
+            <a
               key={href}
               href={href}
-              className="bg-white rounded-2xl border border-pink-100 shadow-sm p-5 hover:shadow-md hover:border-pink-300 transition-all group"
+              className="bg-white rounded-2xl border border-pink-100 shadow-sm p-5 hover:shadow-md hover:border-pink-300 transition-shadow block"
             >
               <div className="text-2xl mb-2">{icon}</div>
-              <div className="font-medium text-pink-700 group-hover:text-pink-600">{label}</div>
+              <div className="font-medium text-pink-700">{label}</div>
               <div className="text-xs text-gray-500 mt-1">{desc}</div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>
