@@ -78,18 +78,18 @@ export default function Budget() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold text-sky-700">💰 Pregnancy & Baby Budget</h1>
+        <h1 className="text-2xl font-semibold text-pink-700">💰 Pregnancy & Baby Budget</h1>
         <p className="text-sm text-gray-500 mt-1">Full cost tracker — nursery, clothing, healthcare & more</p>
       </div>
 
       <div className="grid grid-cols-3 gap-4">
-        <div className="bg-white rounded-xl border border-sky-100 shadow-sm p-4 text-center">
-          <div className="text-xs text-sky-400 uppercase tracking-wider">Total Budget</div>
-          <div className="text-xl font-semibold text-sky-700 mt-1">£{totalBudget.toLocaleString()}</div>
+        <div className="bg-white rounded-xl border border-pink-100 shadow-sm p-4 text-center">
+          <div className="text-xs text-pink-400 uppercase tracking-wider">Total Budget</div>
+          <div className="text-xl font-semibold text-pink-700 mt-1">£{totalBudget.toLocaleString()}</div>
         </div>
-        <div className="bg-white rounded-xl border border-sky-100 shadow-sm p-4 text-center">
-          <div className="text-xs text-sky-400 uppercase tracking-wider">Spent</div>
-          <div className="text-xl font-semibold text-sky-700 mt-1">£{totalActual.toLocaleString()}</div>
+        <div className="bg-white rounded-xl border border-pink-100 shadow-sm p-4 text-center">
+          <div className="text-xs text-pink-400 uppercase tracking-wider">Spent</div>
+          <div className="text-xl font-semibold text-pink-700 mt-1">£{totalActual.toLocaleString()}</div>
         </div>
         <div className={`rounded-xl border shadow-sm p-4 text-center ${remaining >= 0 ? "bg-green-50 border-green-100" : "bg-red-50 border-red-100"}`}>
           <div className="text-xs uppercase tracking-wider text-gray-400">Remaining</div>
@@ -104,16 +104,16 @@ export default function Budget() {
           <button
             key={c}
             onClick={() => setFilterCat(c)}
-            className={`px-3 py-1 rounded-full text-xs transition-colors ${filterCat === c ? "bg-sky-500 text-white" : "bg-white border border-sky-200 text-sky-500 hover:bg-sky-50"}`}
+            className={`px-3 py-1 rounded-full text-xs transition-colors ${filterCat === c ? "bg-pink-500 text-white" : "bg-white border border-pink-200 text-pink-500 hover:bg-pink-50"}`}
           >
             {c}
           </button>
         ))}
       </div>
 
-      <div className="overflow-x-auto rounded-2xl border border-sky-100 shadow-sm">
+      <div className="overflow-x-auto rounded-2xl border border-pink-100 shadow-sm">
         <table className="w-full text-sm bg-white min-w-[700px]">
-          <thead className="bg-sky-50 text-xs text-sky-600 uppercase tracking-wider">
+          <thead className="bg-pink-50 text-xs text-pink-600 uppercase tracking-wider">
             <tr>
               <th className="px-4 py-3 text-left">Item</th>
               <th className="px-4 py-3 text-left">Category</th>
@@ -130,10 +130,10 @@ export default function Budget() {
               const diff = toNum(item.budget) - toNum(item.actual);
               const hasActual = item.actual !== "";
               return (
-                <tr key={idx} className={`border-t border-sky-50 hover:bg-sky-50/30 ${item.purchased ? "opacity-50" : ""}`}>
+                <tr key={idx} className={`border-t border-pink-50 hover:bg-pink-50/30 ${item.purchased ? "opacity-50" : ""}`}>
                   <td className="px-4 py-2">
                     <input
-                      className="w-full bg-transparent outline-none text-sm focus:bg-sky-50 rounded px-1"
+                      className="w-full bg-transparent outline-none text-sm focus:bg-pink-50 rounded px-1"
                       value={item.item}
                       onChange={e => update(idx, { item: e.target.value })}
                       placeholder="Item name"
@@ -141,7 +141,7 @@ export default function Budget() {
                   </td>
                   <td className="px-4 py-2">
                     <select
-                      className="bg-transparent outline-none text-xs text-gray-500 focus:bg-sky-50 rounded"
+                      className="bg-transparent outline-none text-xs text-gray-500 focus:bg-pink-50 rounded"
                       value={item.category}
                       onChange={e => update(idx, { category: e.target.value })}
                     >
@@ -150,7 +150,7 @@ export default function Budget() {
                   </td>
                   <td className="px-4 py-2 text-right">
                     <input
-                      className="w-20 bg-transparent outline-none text-sm text-right border-b border-transparent focus:border-sky-300"
+                      className="w-20 bg-transparent outline-none text-sm text-right border-b border-transparent focus:border-pink-300"
                       type="number"
                       min="0"
                       value={item.budget}
@@ -160,7 +160,7 @@ export default function Budget() {
                   </td>
                   <td className="px-4 py-2 text-right">
                     <input
-                      className="w-20 bg-transparent outline-none text-sm text-right border-b border-sky-200 focus:border-sky-400"
+                      className="w-20 bg-transparent outline-none text-sm text-right border-b border-pink-200 focus:border-pink-400"
                       type="number"
                       min="0"
                       value={item.actual}
@@ -173,7 +173,7 @@ export default function Budget() {
                   </td>
                   <td className="px-4 py-2">
                     <input
-                      className="w-full bg-transparent outline-none text-xs text-gray-400 focus:bg-sky-50 rounded px-1"
+                      className="w-full bg-transparent outline-none text-xs text-gray-400 focus:bg-pink-50 rounded px-1"
                       value={item.whereToBuy}
                       onChange={e => update(idx, { whereToBuy: e.target.value })}
                       placeholder="Where to buy"
@@ -184,11 +184,11 @@ export default function Budget() {
                       type="checkbox"
                       checked={item.purchased}
                       onChange={e => update(idx, { purchased: e.target.checked })}
-                      className="accent-sky-500 w-4 h-4 cursor-pointer"
+                      className="accent-pink-500 w-4 h-4 cursor-pointer"
                     />
                   </td>
                   <td className="px-4 py-2">
-                    <button onClick={() => remove(idx)} className="text-sky-200 hover:text-sky-500 text-xs">✕</button>
+                    <button onClick={() => remove(idx)} className="text-pink-200 hover:text-pink-500 text-xs">✕</button>
                   </td>
                 </tr>
               );
@@ -197,7 +197,7 @@ export default function Budget() {
         </table>
       </div>
 
-      <button onClick={add} className="px-4 py-2 bg-sky-500 text-white rounded-full text-sm hover:bg-sky-600 transition-colors">
+      <button onClick={add} className="px-4 py-2 bg-pink-500 text-white rounded-full text-sm hover:bg-pink-600 transition-colors">
         + Add Item
       </button>
     </div>

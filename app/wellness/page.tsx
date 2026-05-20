@@ -42,29 +42,29 @@ export default function Wellness() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-semibold text-sky-700">🌿 Weekly Wellness Plan</h1>
+        <h1 className="text-2xl font-semibold text-pink-700">🌿 Weekly Wellness Plan</h1>
         <p className="text-sm text-gray-500 mt-1">Nourish your body, mind and soul throughout your pregnancy journey</p>
       </div>
 
-      <div className="overflow-x-auto rounded-2xl border border-sky-100 shadow-sm">
+      <div className="overflow-x-auto rounded-2xl border border-pink-100 shadow-sm">
         <table className="w-full text-xs bg-white min-w-[700px]">
-          <thead className="bg-sky-50">
+          <thead className="bg-pink-50">
             <tr>
-              <th className="px-4 py-3 text-left text-sky-600 font-medium w-40">Category</th>
+              <th className="px-4 py-3 text-left text-pink-600 font-medium w-40">Category</th>
               {days.map(d => (
-                <th key={d} className="px-3 py-3 text-center text-sky-500 font-medium">{d}</th>
+                <th key={d} className="px-3 py-3 text-center text-pink-500 font-medium">{d}</th>
               ))}
             </tr>
           </thead>
           <tbody>
             {plan.map((row, ri) => (
-              <tr key={ri} className="border-t border-sky-50 even:bg-sky-50/30">
-                <td className="px-4 py-2 font-medium text-sky-700 whitespace-nowrap">{row.category}</td>
+              <tr key={ri} className="border-t border-pink-50 even:bg-pink-50/30">
+                <td className="px-4 py-2 font-medium text-pink-700 whitespace-nowrap">{row.category}</td>
                 {row.days.map((cell, di) => (
                   <td key={di} className="px-2 py-1">
                     <textarea
                       rows={2}
-                      className="w-full border border-sky-100 rounded px-1.5 py-1 text-xs bg-white resize-none focus:outline-none focus:ring-1 focus:ring-sky-300"
+                      className="w-full border border-pink-100 rounded px-1.5 py-1 text-xs bg-white resize-none focus:outline-none focus:ring-1 focus:ring-pink-300"
                       value={cell}
                       onChange={e => updateCell(ri, di, e.target.value)}
                     />
@@ -77,17 +77,17 @@ export default function Wellness() {
       </div>
 
       <div>
-        <h2 className="text-lg font-medium text-sky-700 mb-4">Monthly Wellness Goals</h2>
+        <h2 className="text-lg font-medium text-pink-700 mb-4">Monthly Wellness Goals</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {trimesterGoals.map(({ label }, i) => (
-            <div key={i} className="bg-white rounded-2xl border border-sky-100 shadow-sm p-5 space-y-3">
-              <h3 className="font-medium text-sky-600 text-sm">{label}</h3>
+            <div key={i} className="bg-white rounded-2xl border border-pink-100 shadow-sm p-5 space-y-3">
+              <h3 className="font-medium text-pink-600 text-sm">{label}</h3>
               {(["fitness", "nutrition", "wellbeing", "notes"] as const).map(field => (
                 <div key={field} className="flex flex-col gap-1">
-                  <label className="text-xs text-sky-400 uppercase tracking-wider">{field === "wellbeing" ? "Mental Wellbeing" : field.charAt(0).toUpperCase() + field.slice(1)}</label>
+                  <label className="text-xs text-pink-400 uppercase tracking-wider">{field === "wellbeing" ? "Mental Wellbeing" : field.charAt(0).toUpperCase() + field.slice(1)}</label>
                   <textarea
                     rows={2}
-                    className="border border-sky-200 rounded px-2 py-1 text-xs resize-none focus:outline-none focus:ring-1 focus:ring-sky-300"
+                    className="border border-pink-200 rounded px-2 py-1 text-xs resize-none focus:outline-none focus:ring-1 focus:ring-pink-300"
                     value={goals[i]?.[field] ?? ""}
                     onChange={e => updateGoal(i, field, e.target.value)}
                   />

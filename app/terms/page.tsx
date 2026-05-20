@@ -58,17 +58,17 @@ export default function Terms() {
     <div className="max-w-3xl mx-auto space-y-10">
 
       <div className="py-8 space-y-3">
-        <h1 className="text-3xl font-semibold text-sky-700">Terms & Conditions</h1>
+        <h1 className="text-3xl font-semibold text-pink-700">Terms & Conditions</h1>
         <p className="text-sm text-gray-400">Effective date: 20 May 2026</p>
         <p className="text-gray-600 leading-relaxed">
           Please read these Terms and Conditions carefully before using Pregnancy Planner Suite. By using the App you agree to these terms.
         </p>
       </div>
 
-      <div className="bg-sky-50 border border-sky-100 rounded-2xl px-6 py-5 flex gap-4">
+      <div className="bg-pink-50 border border-pink-100 rounded-2xl px-6 py-5 flex gap-4">
         <div className="text-2xl shrink-0">⚕️</div>
         <div>
-          <div className="font-semibold text-sky-700 mb-1">Important — not medical advice</div>
+          <div className="font-semibold text-pink-700 mb-1">Important — not medical advice</div>
           <p className="text-sm text-gray-600 leading-relaxed">
             Nothing in this app constitutes medical advice. Always consult your GP, midwife, or qualified healthcare professional for any medical questions during your pregnancy.
           </p>
@@ -77,14 +77,14 @@ export default function Terms() {
 
       <div className="space-y-6">
         {sections.map(({ title, content }) => (
-          <div key={title} className="bg-white rounded-2xl border border-sky-100 shadow-sm px-6 py-5 space-y-2">
-            <h2 className="font-semibold text-sky-700">{title}</h2>
+          <div key={title} className="bg-white rounded-2xl border border-pink-100 shadow-sm px-6 py-5 space-y-2">
+            <h2 className="font-semibold text-pink-700">{title}</h2>
             <p className="text-sm text-gray-600 leading-relaxed">{content}</p>
           </div>
         ))}
       </div>
 
-      <div className="text-center text-sky-300 text-sm pb-6">
+      <div className="text-center text-pink-300 text-sm pb-6">
         Pregnancy Planner Suite — built with care, designed for privacy 🌸
       </div>
 

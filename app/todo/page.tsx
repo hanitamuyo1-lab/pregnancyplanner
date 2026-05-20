@@ -46,8 +46,8 @@ const t3: Task[] = [
 ];
 
 const priorityBadge: Record<string, string> = {
-  High: "bg-sky-100 text-sky-700",
-  Medium: "bg-sky-50 text-sky-500",
+  High: "bg-pink-100 text-pink-700",
+  Medium: "bg-pink-50 text-pink-500",
   Low: "bg-gray-100 text-gray-500",
 };
 
@@ -70,14 +70,14 @@ function TaskList({ storeKey, defaultTasks }: { storeKey: string; defaultTasks: 
 
   return (
     <div className="space-y-2">
-      <div className="text-xs text-sky-400 mb-3">{done} of {tasks.length} done</div>
+      <div className="text-xs text-pink-400 mb-3">{done} of {tasks.length} done</div>
       {tasks.map((t, i) => (
-        <div key={i} className={`flex items-start gap-3 bg-white rounded-lg border px-4 py-3 transition-colors ${t.done ? "border-sky-50 opacity-60" : "border-sky-100"}`}>
+        <div key={i} className={`flex items-start gap-3 bg-white rounded-lg border px-4 py-3 transition-colors ${t.done ? "border-pink-50 opacity-60" : "border-pink-100"}`}>
           <input
             type="checkbox"
             checked={t.done}
             onChange={() => toggle(i)}
-            className="accent-sky-500 mt-0.5 w-4 h-4 shrink-0"
+            className="accent-pink-500 mt-0.5 w-4 h-4 shrink-0"
           />
           <div className="flex-1 min-w-0">
             <input
@@ -105,10 +105,10 @@ function TaskList({ storeKey, defaultTasks }: { storeKey: string; defaultTasks: 
             </div>
           </div>
           <span className={`text-xs px-2 py-0.5 rounded-full shrink-0 ${priorityBadge[t.priority]}`}>{t.priority}</span>
-          <button onClick={() => remove(i)} className="text-sky-200 hover:text-sky-400 text-xs shrink-0">✕</button>
+          <button onClick={() => remove(i)} className="text-pink-200 hover:text-pink-400 text-xs shrink-0">✕</button>
         </div>
       ))}
-      <button onClick={add} className="text-sm text-sky-400 hover:text-sky-600 mt-2">+ Add task</button>
+      <button onClick={add} className="text-sm text-pink-400 hover:text-pink-600 mt-2">+ Add task</button>
     </div>
   );
 }
@@ -117,15 +117,15 @@ export default function Todo() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-semibold text-sky-700">✅ Trimester To-Do List</h1>
+        <h1 className="text-2xl font-semibold text-pink-700">✅ Trimester To-Do List</h1>
         <p className="text-sm text-gray-500 mt-1">Essential tasks broken down by trimester</p>
       </div>
 
       {sections.map(({ key, label, sub, default: def }) => (
         <div key={key} className="space-y-3">
           <div className="flex items-baseline gap-2">
-            <h2 className="text-lg font-medium text-sky-700">{label}</h2>
-            <span className="text-sm text-sky-400">{sub}</span>
+            <h2 className="text-lg font-medium text-pink-700">{label}</h2>
+            <span className="text-sm text-pink-400">{sub}</span>
           </div>
           <TaskList storeKey={`pp-todo-${key}`} defaultTasks={def} />
         </div>

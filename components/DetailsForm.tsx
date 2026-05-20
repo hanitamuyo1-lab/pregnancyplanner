@@ -19,26 +19,26 @@ export default function DetailsForm() {
 
   const field = (label: string, key: keyof Details) => (
     <div className="flex flex-col gap-1" key={key}>
-      <label className="text-xs text-sky-500 uppercase tracking-wider">{label}</label>
+      <label className="text-xs text-pink-500 uppercase tracking-wider">{label}</label>
       {editing ? (
         <input
-          className="border border-sky-200 rounded px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-sky-300"
+          className="border border-pink-200 rounded px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-pink-300"
           value={details[key]}
           onChange={e => setDetails({ ...details, [key]: e.target.value })}
         />
       ) : (
-        <span className="text-sm">{details[key] || <span className="text-sky-300 italic">—</span>}</span>
+        <span className="text-sm">{details[key] || <span className="text-pink-300 italic">—</span>}</span>
       )}
     </div>
   );
 
   return (
-    <div className="bg-white rounded-2xl border border-sky-100 shadow-sm p-6 space-y-4">
+    <div className="bg-white rounded-2xl border border-pink-100 shadow-sm p-6 space-y-4">
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-medium text-sky-700">Your Details</h2>
+        <h2 className="text-lg font-medium text-pink-700">Your Details</h2>
         <button
           onClick={() => setEditing(!editing)}
-          className="text-xs bg-sky-100 hover:bg-sky-200 text-sky-700 px-3 py-1 rounded-full transition-colors"
+          className="text-xs bg-pink-100 hover:bg-pink-200 text-pink-700 px-3 py-1 rounded-full transition-colors"
         >
           {editing ? "Save" : "Edit"}
         </button>
