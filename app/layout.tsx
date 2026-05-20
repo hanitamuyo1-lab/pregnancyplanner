@@ -44,16 +44,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <Nav />
         <main className="flex-1 max-w-5xl mx-auto w-full px-4 py-8 relative z-10">{children}</main>
-        <footer className="relative z-10 text-center text-xs text-white/60 py-5 space-y-1">
-          <p className="font-medium text-white/80">Your complete companion from bump to baby</p>
+        <footer className="relative z-10 text-center text-xs text-black/60 py-5 space-y-1">
+          <p className="font-medium text-black/80">Your complete companion from bump to baby</p>
           <p>
-            <a href="/about" className="hover:text-white underline underline-offset-2 transition-colors">About</a>
+            <a href="/about" className="hover:text-black underline underline-offset-2 transition-colors">About</a>
             <span className="mx-2">·</span>
-            <a href="/privacy" className="hover:text-white underline underline-offset-2 transition-colors">Privacy Policy</a>
+            <a href="/privacy" className="hover:text-black underline underline-offset-2 transition-colors">Privacy Policy</a>
             <span className="mx-2">·</span>
-            <a href="/terms" className="hover:text-white underline underline-offset-2 transition-colors">Terms & Conditions</a>
+            <a href="/terms" className="hover:text-black underline underline-offset-2 transition-colors">Terms & Conditions</a>
             <span className="mx-2">·</span>
-            <a href="/faq" className="hover:text-white underline underline-offset-2 transition-colors">FAQ</a>
+            <a href="/faq" className="hover:text-black underline underline-offset-2 transition-colors">FAQ</a>
           </p>
         </footer>
       </body>
