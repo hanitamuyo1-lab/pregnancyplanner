@@ -33,17 +33,20 @@ export default function DetailsForm() {
   );
 
   return (
-    <div className="bg-white rounded-2xl border border-pink-100 shadow-sm p-6 space-y-4">
-      <div className="flex items-center justify-between">
-        <h2 className="text-lg font-medium text-pink-700">Your Details</h2>
+    <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-pink-100">
+      <div className="bg-gradient-to-r from-pink-500 to-rose-400 px-6 py-4 flex items-center justify-between">
+        <div>
+          <h2 className="text-base font-bold text-white">Your Details</h2>
+          <p className="text-pink-100 text-xs mt-0.5">Your pregnancy at a glance</p>
+        </div>
         <button
           onClick={() => setEditing(!editing)}
-          className="text-xs bg-pink-100 hover:bg-pink-200 text-pink-700 px-3 py-1 rounded-full transition-colors"
+          className="text-xs bg-white/20 hover:bg-white/30 text-white border border-white/30 px-4 py-1.5 rounded-full transition-colors font-medium"
         >
           {editing ? "Save" : "Edit"}
         </button>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
         {field("Mum's Name", "mumName")}
         {field("Due Date", "dueDate")}
         {field("Partner's Name", "partnerName")}
