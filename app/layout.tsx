@@ -19,6 +19,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/about" className="hover:text-pink-500 underline underline-offset-2 transition-colors">About</a>
             <span className="mx-2">·</span>
             <a href="/privacy" className="hover:text-pink-500 underline underline-offset-2 transition-colors">Privacy Policy</a>
+            <span className="mx-2">·</span>
+            <a href="/terms" className="hover:text-pink-500 underline underline-offset-2 transition-colors">Terms & Conditions</a>
+            <span className="mx-2">·</span>
+            <a href="/faq" className="hover:text-pink-500 underline underline-offset-2 transition-colors">FAQ</a>
           </p>
         </footer>
       </body>
