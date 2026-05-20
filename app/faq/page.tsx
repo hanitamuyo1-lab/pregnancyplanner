@@ -8,19 +8,48 @@ const faqs = [
     items: [
       {
         q: "How do I get started with the app?",
-        a: "Head to the Dashboard and fill in your personal details — your name, due date, midwife, and GP. From there, use the navigation at the top to explore each section. We recommend starting with the Journal and Appointments pages early in your pregnancy.",
+        a: "Subscribe to Pregnancy Planner Suite to unlock full access. Once subscribed, head to the Dashboard and fill in your personal details — your name, due date, midwife, and GP. From there, use the navigation at the top to explore each section. We recommend starting with the Journal and Appointments pages early in your pregnancy.",
       },
       {
         q: "Do I need to create an account?",
-        a: "No. Pregnancy Planner Suite requires no account, no email address, and no registration of any kind. You can use the full app immediately without identifying yourself.",
+        a: "Yes. A subscription account is required to access Pregnancy Planner Suite. Your account lets us verify your active subscription and, in future, will enable secure cloud sync so your data is available across all your devices.",
       },
       {
-        q: "Is the app free to use?",
-        a: "Yes, completely free. There are no subscriptions, no premium tiers, and no hidden charges.",
+        q: "Is there a free trial?",
+        a: "Yes — we offer a 7-day free trial so you can explore the full app before committing. No charge is made until the trial ends. You can cancel at any time during the trial period and will not be billed.",
       },
       {
         q: "Does the app work on my phone?",
-        a: "Yes. The app is fully responsive and works on any modern browser — on your phone, tablet, laptop, or desktop computer.",
+        a: "Yes. The app is fully responsive and works on any modern browser — on your phone, tablet, laptop, or desktop computer. A dedicated iOS app is also coming soon.",
+      },
+    ],
+  },
+  {
+    category: "Subscription & Billing",
+    items: [
+      {
+        q: "How much does a subscription cost?",
+        a: "Pregnancy Planner Suite is available on a Monthly plan at £3.99/month, or an Annual plan at £29.99/year (saving over 35% compared to monthly). Prices may vary by region.",
+      },
+      {
+        q: "What do I get with a subscription?",
+        a: "Full access to all features: Pregnancy Journal (weeks 1–40), Baby Shower Planner, Doctor & Midwife Appointments tracker, Weekly Wellness Plan, Trimester To-Do lists, Pregnancy Budget tracker, and Activities Planner. Future updates and new features are included at no extra cost.",
+      },
+      {
+        q: "How do I cancel my subscription?",
+        a: "You can cancel at any time from your account settings. On iOS, manage your subscription through Settings → Apple ID → Subscriptions. On the web, cancel directly from your account page. Cancellation takes effect at the end of your current billing period — you will not be charged again after that.",
+      },
+      {
+        q: "Will I be charged automatically?",
+        a: "Yes. Subscriptions renew automatically at the end of each billing period (monthly or annual) unless cancelled beforehand. You will receive a reminder email before any renewal charge.",
+      },
+      {
+        q: "Can I get a refund?",
+        a: "If you subscribed via the App Store, refund requests are handled by Apple — visit reportaproblem.apple.com. If you subscribed via our website, contact us within 14 days of purchase for a refund under our satisfaction guarantee.",
+      },
+      {
+        q: "Do you offer any discounts?",
+        a: "We offer a 35%+ saving when you choose the Annual plan over Monthly. We also run occasional promotional offers — follow us to stay updated.",
       },
     ],
   },
@@ -29,23 +58,19 @@ const faqs = [
     items: [
       {
         q: "Where is my data stored?",
-        a: "All your data is stored in your browser's local storage — on your device only. Nothing is uploaded to any server or database. We have no access to anything you enter.",
+        a: "Currently your data is stored in your browser's local storage — on your device only. Nothing is uploaded to any server. Cloud sync across devices is coming in a future update for all subscribers.",
       },
       {
         q: "Will my data be there when I come back?",
-        a: "Yes, as long as you use the same browser on the same device and have not cleared your browser's local storage or cache. If you use a different browser or device, your data will not be there as it has not been synced anywhere.",
+        a: "Yes, as long as you use the same browser on the same device and have not cleared your browser's local storage or cache. With the upcoming cloud sync feature, your data will be available on any device you sign in to.",
       },
       {
-        q: "Can I use the app on multiple devices?",
-        a: "Currently, data is stored locally per device and browser, so it does not automatically sync between devices. To use the app on another device, you would need to re-enter your information on that device.",
+        q: "What happens if I cancel my subscription?",
+        a: "If you cancel, your access continues until the end of your paid period. After that, you will no longer be able to access the app's features. Your locally stored data remains on your device but cannot be accessed through the app.",
       },
       {
-        q: "What happens if I clear my browser cache?",
-        a: "Clearing your browser's cache or local storage will permanently delete all your planner data. We recommend using the app regularly on one device and avoiding clearing local storage if you want to keep your data.",
-      },
-      {
-        q: "Can you recover my data if I accidentally delete it?",
-        a: "Unfortunately, no. Because your data is stored only on your device and we have no access to it, we are unable to recover it if it is deleted. Always be careful when clearing your browser storage.",
+        q: "Is my data private?",
+        a: "Yes. Your personal health information is treated with the utmost care. We do not sell or share your data with third parties. See our Privacy Policy for full details.",
       },
     ],
   },
@@ -65,33 +90,8 @@ const faqs = [
         a: "Yes. On the Appointments page, click '+ Add Appointment' to add any extra scans, consultant visits, or other appointments with your own date, time, and notes.",
       },
       {
-        q: "How do I track my baby shower gifts?",
-        a: "Go to the Baby Shower page and switch to the 'Gift Registry' tab. The page comes pre-loaded with common items — tick the 'Received' checkbox as gifts arrive. You can also add your own items with the '+ Add Item' button.",
-      },
-      {
         q: "How does the Budget tracker work?",
         a: "The Budget page shows a list of common pregnancy and baby purchases with estimated costs pre-filled. Enter your actual spend in the 'Actual' column as you buy things. The totals at the top update in real time to show your remaining balance.",
-      },
-      {
-        q: "Can I edit the Wellness Plan grid?",
-        a: "Yes. Every cell in the 7-day Wellness Plan table is editable. Click into any cell and type your own plan for that day and category. Your changes are saved automatically.",
-      },
-    ],
-  },
-  {
-    category: "Privacy & Safety",
-    items: [
-      {
-        q: "Is my pregnancy data private?",
-        a: "Yes. Your data never leaves your device. We collect no personal information, use no tracking, and have no access to what you enter. See our Privacy Policy for full details.",
-      },
-      {
-        q: "Is this app safe to use during pregnancy?",
-        a: "Yes. The app is a digital organisational tool — it poses no physical risk. However, please remember that nothing in the app constitutes medical advice. Always follow the guidance of your GP, midwife, or healthcare team.",
-      },
-      {
-        q: "What if someone else uses my device?",
-        a: "Anyone with access to your device and browser can open the app and see your planner data. If you share your device, we recommend using a private/incognito browser window, or ensuring your device is secured with a password.",
       },
     ],
   },
@@ -108,7 +108,7 @@ const faqs = [
       },
       {
         q: "The app looks broken or is not loading properly. What should I do?",
-        a: "Try refreshing the page. If the issue persists, try clearing your browser cache and reloading. If you continue to experience problems, try a different browser.",
+        a: "Try refreshing the page. If the issue persists, try clearing your browser cache and reloading. If you continue to experience problems, try a different browser or contact our support team.",
       },
     ],
   },
@@ -141,7 +141,7 @@ export default function FAQ() {
       <div className="py-8 space-y-3">
         <h1 className="text-3xl font-semibold text-pink-700">Frequently Asked Questions</h1>
         <p className="text-gray-500 leading-relaxed">
-          Everything you need to know about using Pregnancy Planner Suite. Can't find your answer? Check the About page or reach out via GitHub.
+          Everything you need to know about Pregnancy Planner Suite — subscriptions, billing, features, and more. Can't find your answer? Get in touch via the contact details on our About page.
         </p>
       </div>
 
