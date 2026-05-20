@@ -11,6 +11,7 @@ const links = [
   { href: "/todo", label: "To-Do" },
   { href: "/budget", label: "Budget" },
   { href: "/activities", label: "Activities" },
+  { href: "/about", label: "About" },
 ];
 
 export default function NavLinks() {
