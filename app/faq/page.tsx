@@ -29,7 +29,7 @@ const faqs = [
     items: [
       {
         q: "How much does it cost?",
-        a: "Pregnancy Planner Suite is a one-time payment of £7.99 on the App Store. Pay once and own it forever — there are no subscriptions, no renewals, and no hidden charges.",
+        a: "Pregnancy Planner Suite is a one-time payment of £2.99 on the App Store. Pay once and own it forever — there are no subscriptions, no renewals, and no hidden charges.",
       },
       {
         q: "What do I get with my purchase?",
