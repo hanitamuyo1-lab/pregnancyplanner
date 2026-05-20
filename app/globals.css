@@ -1,12 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fff9fb;
   --foreground: #3d2a35;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: Georgia, 'Times New Roman', serif;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fce8f0 0%, #f472b6 55%, #db2777 100%);
+  background-attachment: fixed;
+}
+
+/* Grid overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.22) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Everything sits above the grid */
+body > * {
+  position: relative;
+  z-index: 1;
 }

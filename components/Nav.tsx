@@ -21,7 +21,7 @@ function NavFallback() {
         <Link
           key={href}
           href={href}
-          className="px-3 py-1 rounded-full text-sm text-pink-700 hover:bg-pink-100 transition-colors"
+          className="px-3 py-1 rounded-full text-sm text-white/80 hover:bg-white/20 transition-colors"
         >
           {label}
         </Link>
@@ -32,9 +32,9 @@ function NavFallback() {
 
 export default function Nav() {
   return (
-    <header className="bg-pink-50 border-b border-pink-200 shadow-sm">
+    <header className="relative z-10 bg-white/20 backdrop-blur-md border-b border-white/30 shadow-sm">
       <div className="max-w-5xl mx-auto px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-3">
-        <span className="text-lg font-semibold text-pink-700 shrink-0">Pregnancy Planner</span>
+        <span className="text-lg font-semibold text-white shrink-0 drop-shadow">Pregnancy Planner</span>
         <Suspense fallback={<NavFallback />}>
           <NavLinks />
         </Suspense>
