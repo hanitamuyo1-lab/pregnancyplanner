@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import Providers from "@/components/Providers";
+import AuthGuard from "@/components/AuthGuard";
 
 export const metadata: Metadata = {
   title: "Pregnancy Planner Suite",
@@ -42,7 +44,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           ))}
         </div>
 
+        <Providers>
         <Nav />
+        <AuthGuard>
         <main className="flex-1 max-w-5xl mx-auto w-full px-4 py-8 relative z-10">{children}</main>
         <footer className="relative z-10 text-center text-xs text-black/60 py-5 space-y-1">
           <p className="font-medium text-black/80">Your complete companion from bump to baby</p>
@@ -58,6 +62,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/support" className="hover:text-black underline underline-offset-2 transition-colors">Support</a>
           </p>
         </footer>
+        </AuthGuard>
+        </Providers>
       </body>
     </html>
   );

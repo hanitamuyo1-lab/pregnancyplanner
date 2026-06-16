@@ -1,4 +1,5 @@
 import NavLinks from "./NavLinks";
+import AuthButton from "./AuthButton";
 
 export default function Nav() {
   return (
@@ -6,6 +7,7 @@ export default function Nav() {
       <div className="max-w-5xl mx-auto px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-3">
         <a href="/" className="text-lg font-semibold text-white shrink-0 drop-shadow hover:text-white/80 transition-colors">Pregnancy Planner</a>
         <NavLinks />
+        <AuthButton />
       </div>
     </header>
   );
